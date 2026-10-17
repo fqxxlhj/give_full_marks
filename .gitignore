@@ -1,0 +1,35 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# ---------- IDE ----------
+.idea/
+*.iml
+.vscode/
+
+# ---------- 数据：体积大，不入库（class.txt / stopwords.txt 很小，保留以便复现） ----------
+data/*.csv
+data/train.txt
+data/dev.txt
+data/test.txt
+
+# ---------- 课件参考副本里的数据与模型 ----------
+预习/课件参考_TMF_Code/**/data/
+预习/课件参考_TMF_Code/**/model/
+
+# ---------- 模型产物（rf_model.pkl 约 169MB，超出 GitHub 单文件 100MB 限制） ----------
+artifacts/model/
+*.pkl
+
+# ---------- 系统 ----------
+Thumbs.db
+desktop.ini
+.DS_Store

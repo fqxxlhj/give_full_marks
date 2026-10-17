@@ -1,0 +1,297 @@
+{
+  "classes": [
+    "finance",
+    "realty",
+    "stocks",
+    "education",
+    "science",
+    "society",
+    "politics",
+    "sports",
+    "game",
+    "entertainment"
+  ],
+  "splits": {
+    "train": {
+      "split": "train",
+      "sample_count": 180000,
+      "class_count": 10,
+      "empty_sentence_count": 0,
+      "duplicate_row_count": 1000,
+      "duplicate_text_count": 1046,
+      "conflict_text_count": 46,
+      "garbled_text_count": 734,
+      "length": {
+        "min": 3,
+        "mean": 19.212577777777778,
+        "variance": 14.92889957728395,
+        "std": 3.863793418039317,
+        "p50": 19.0,
+        "p90": 24.0,
+        "p95": 25.0,
+        "p99": 27.0,
+        "max": 38
+      },
+      "label_distribution": [
+        {
+          "label_id": 0,
+          "class_name": "finance",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 1,
+          "class_name": "realty",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 2,
+          "class_name": "stocks",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 3,
+          "class_name": "education",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 4,
+          "class_name": "science",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 5,
+          "class_name": "society",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 6,
+          "class_name": "politics",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 7,
+          "class_name": "sports",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 8,
+          "class_name": "game",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 9,
+          "class_name": "entertainment",
+          "count": 18000,
+          "ratio": 0.1
+        }
+      ]
+    },
+    "dev": {
+      "split": "dev",
+      "sample_count": 10000,
+      "class_count": 10,
+      "empty_sentence_count": 0,
+      "duplicate_row_count": 7,
+      "duplicate_text_count": 7,
+      "conflict_text_count": 0,
+      "garbled_text_count": 33,
+      "length": {
+        "min": 4,
+        "mean": 19.1369,
+        "variance": 14.96875839,
+        "std": 3.8689479694097724,
+        "p50": 19.0,
+        "p90": 24.0,
+        "p95": 25.0,
+        "p99": 27.0,
+        "max": 33
+      },
+      "label_distribution": [
+        {
+          "label_id": 0,
+          "class_name": "finance",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 1,
+          "class_name": "realty",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 2,
+          "class_name": "stocks",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 3,
+          "class_name": "education",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 4,
+          "class_name": "science",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 5,
+          "class_name": "society",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 6,
+          "class_name": "politics",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 7,
+          "class_name": "sports",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 8,
+          "class_name": "game",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 9,
+          "class_name": "entertainment",
+          "count": 1000,
+          "ratio": 0.1
+        }
+      ]
+    },
+    "test": {
+      "split": "test",
+      "sample_count": 10000,
+      "class_count": 10,
+      "empty_sentence_count": 0,
+      "duplicate_row_count": 10,
+      "duplicate_text_count": 11,
+      "conflict_text_count": 1,
+      "garbled_text_count": 27,
+      "length": {
+        "min": 4,
+        "mean": 19.1798,
+        "variance": 15.07527196,
+        "std": 3.8826887539435866,
+        "p50": 19.0,
+        "p90": 24.0,
+        "p95": 25.0,
+        "p99": 27.0,
+        "max": 32
+      },
+      "label_distribution": [
+        {
+          "label_id": 0,
+          "class_name": "finance",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 1,
+          "class_name": "realty",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 2,
+          "class_name": "stocks",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 3,
+          "class_name": "education",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 4,
+          "class_name": "science",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 5,
+          "class_name": "society",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 6,
+          "class_name": "politics",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 7,
+          "class_name": "sports",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 8,
+          "class_name": "game",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 9,
+          "class_name": "entertainment",
+          "count": 1000,
+          "ratio": 0.1
+        }
+      ]
+    }
+  },
+  "overlap": {
+    "train_dev": {
+      "count": 91,
+      "examples": [
+        "证券通机构天天涨幅榜背景大揭秘",
+        "菲律宾警察与安帕图安家族武装交火",
+        "大兴润枫锦尚3期3月开盘15000元全款97折(图)",
+        "国展公馆地铁现房小户型7月开盘均价8500(图)",
+        "东五环富力又一城通透板楼两居均价14500元(图)"
+      ]
+    },
+    "train_test": {
+      "count": 108,
+      "examples": [
+        "易小迪：房地产市场供大于求局面短期难改变(图)",
+        "海淀上地领秀新硅谷三居板楼7月开盘(图)",
+        "基金托管市场依旧三强争霸",
+        "海淀上林溪9月推93平两居新房源均价22500元",
+        "朝阳北路润枫嘉尚7月开盘精装小户型39平起(图)"
+      ]
+    },
+    "dev_test": {
+      "count": 8,
+      "examples": [
+        "证券通盈利和评级综合调整一览表",
+        "颐和原著将成不可复制豪宅典范(组图)",
+        "每日晚间实力机构点评热门个股精选",
+        "顺义香悦四季2-3居及独栋别墅在售均价18000",
+        "新股上市一览"
+      ]
+    }
+  }
+}

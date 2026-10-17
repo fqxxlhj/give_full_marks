@@ -1,0 +1,297 @@
+{
+  "classes": [
+    "finance",
+    "realty",
+    "stocks",
+    "education",
+    "science",
+    "society",
+    "politics",
+    "sports",
+    "game",
+    "entertainment"
+  ],
+  "splits": {
+    "train": {
+      "split": "train",
+      "sample_count": 180000,
+      "class_count": 10,
+      "empty_sentence_count": 0,
+      "duplicate_row_count": 1000,
+      "duplicate_text_count": 1046,
+      "conflict_text_count": 46,
+      "garbled_text_count": 734,
+      "length": {
+        "min": 3,
+        "mean": 19.212577777777778,
+        "variance": 14.92889957728395,
+        "std": 3.863793418039317,
+        "p50": 19.0,
+        "p90": 24.0,
+        "p95": 25.0,
+        "p99": 27.0,
+        "max": 38
+      },
+      "label_distribution": [
+        {
+          "label_id": 0,
+          "class_name": "finance",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 1,
+          "class_name": "realty",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 2,
+          "class_name": "stocks",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 3,
+          "class_name": "education",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 4,
+          "class_name": "science",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 5,
+          "class_name": "society",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 6,
+          "class_name": "politics",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 7,
+          "class_name": "sports",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 8,
+          "class_name": "game",
+          "count": 18000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 9,
+          "class_name": "entertainment",
+          "count": 18000,
+          "ratio": 0.1
+        }
+      ]
+    },
+    "dev": {
+      "split": "dev",
+      "sample_count": 10000,
+      "class_count": 10,
+      "empty_sentence_count": 0,
+      "duplicate_row_count": 7,
+      "duplicate_text_count": 7,
+      "conflict_text_count": 0,
+      "garbled_text_count": 33,
+      "length": {
+        "min": 4,
+        "mean": 19.1369,
+        "variance": 14.96875839,
+        "std": 3.8689479694097724,
+        "p50": 19.0,
+        "p90": 24.0,
+        "p95": 25.0,
+        "p99": 27.0,
+        "max": 33
+      },
+      "label_distribution": [
+        {
+          "label_id": 0,
+          "class_name": "finance",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 1,
+          "class_name": "realty",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 2,
+          "class_name": "stocks",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 3,
+          "class_name": "education",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 4,
+          "class_name": "science",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 5,
+          "class_name": "society",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 6,
+          "class_name": "politics",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 7,
+          "class_name": "sports",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 8,
+          "class_name": "game",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 9,
+          "class_name": "entertainment",
+          "count": 1000,
+          "ratio": 0.1
+        }
+      ]
+    },
+    "test": {
+      "split": "test",
+      "sample_count": 10000,
+      "class_count": 10,
+      "empty_sentence_count": 0,
+      "duplicate_row_count": 10,
+      "duplicate_text_count": 11,
+      "conflict_text_count": 1,
+      "garbled_text_count": 27,
+      "length": {
+        "min": 4,
+        "mean": 19.1798,
+        "variance": 15.07527196,
+        "std": 3.8826887539435866,
+        "p50": 19.0,
+        "p90": 24.0,
+        "p95": 25.0,
+        "p99": 27.0,
+        "max": 32
+      },
+      "label_distribution": [
+        {
+          "label_id": 0,
+          "class_name": "finance",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 1,
+          "class_name": "realty",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 2,
+          "class_name": "stocks",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 3,
+          "class_name": "education",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 4,
+          "class_name": "science",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 5,
+          "class_name": "society",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 6,
+          "class_name": "politics",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 7,
+          "class_name": "sports",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 8,
+          "class_name": "game",
+          "count": 1000,
+          "ratio": 0.1
+        },
+        {
+          "label_id": 9,
+          "class_name": "entertainment",
+          "count": 1000,
+          "ratio": 0.1
+        }
+      ]
+    }
+  },
+  "overlap": {
+    "train_dev": {
+      "count": 91,
+      "examples": [
+        "上半年北京二手房成交破10万套 超过07年总量",
+        "午评：商品普遍冲高回落 农产品表现欠佳",
+        "一批券商个股最新评级及推荐金股",
+        "任志强：房地产市场最坏的情况过去了",
+        "昌平领秀慧谷57平起1-3居28日开盘均价15100"
+      ]
+    },
+    "train_test": {
+      "count": 108,
+      "examples": [
+        "智地钻河公馆小户型总价90万起全款95折(图)",
+        "夏威夷南岸二期11月底12月初推板楼新房源",
+        "华尔街早餐：周二美股盘前必读",
+        "顺义MOMA万万树400平起独栋别墅均价25000元(图)",
+        "房山中国铁建长阳国际城近期推80-120平2-3居"
+      ]
+    },
+    "dev_test": {
+      "count": 8,
+      "examples": [
+        "山东本科批志愿填报结束 高考录取7月2日开始",
+        "证券通盈利和评级综合调整一览表",
+        "每日晚间实力机构点评热门个股精选",
+        "明日股市三大猜想及应对策略",
+        "新股上市一览"
+      ]
+    }
+  }
+}

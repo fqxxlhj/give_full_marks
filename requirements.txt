@@ -1,0 +1,17 @@
+# 中文文本分类（新闻标题）—— TF-IDF + 随机森林 基线
+# 实测版本（Python 3.10.22）
+# pandas 2.3.3 / scikit-learn 1.7.2 / streamlit 1.65.0
+
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+jieba>=0.42
+flask>=2.2
+streamlit>=1.30
+requests>=2.28
+matplotlib>=3.7
+seaborn>=0.12
+
+# 可选：换成 BERT 版本时再装
+# torch
+# transformers
