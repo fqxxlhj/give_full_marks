@@ -33,3 +33,13 @@ artifacts/model/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# ---------- 分天项目：模型权重（20 GB，绝不入库） ----------
+*.bin
+day*/models/
+
+# ---------- 分天项目：原始/中间数据、预训练权重（42 MB + 1.24 GB） ----------
+day03_fastext/data/
+day04_BERT/data/
+day04_BERT/pretrained/
+**/data/processed/

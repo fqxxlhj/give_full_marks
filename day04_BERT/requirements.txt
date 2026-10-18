@@ -1,0 +1,9 @@
+# day04 · BERT 依赖
+# 实测环境：D:\AnacondaEnvs\fasttext_env （torch 2.14.1+cpu, transformers 5.20.1）
+
+torch
+transformers
+scikit-learn
+flask
+streamlit
+requests

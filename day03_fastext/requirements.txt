@@ -1,0 +1,9 @@
+# day03 · FastText 依赖
+# 实测环境：D:\AnacondaEnvs\fasttext_env （Python 3.10.21）
+
+fasttext
+jieba
+scikit-learn
+flask
+streamlit
+requests
