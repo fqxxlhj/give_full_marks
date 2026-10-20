@@ -1,0 +1,17 @@
+{
+  "class_list": [
+    "finance",
+    "realty",
+    "stocks",
+    "education",
+    "science",
+    "society",
+    "politics",
+    "sports",
+    "game",
+    "entertainment"
+  ],
+  "max_length": 64,
+  "best_f1": 0.9415238371338394,
+  "pretrained_mode": "D:\\soft\\python\\NLP\\投满分项目\\04_bert\\pretrained\\bert-base-chinese"
+}

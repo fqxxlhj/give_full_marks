@@ -1,0 +1,26 @@
+04_BERT 测试集评估结果（test_model.py 实跑输出，2026-10-20）
+================================================================
+环境：D:\AnacondaEnvs\fasttext_env  torch 2.14.1+cpu  transformers 5.20.1
+模型：models/best_model（第 4 轮，dev macro-F1 0.9412）
+数据：04_BERT/data/test.txt（10000 条，10 类各 1000）
+耗时：CPU 推理 4 分 00 秒（batch 16，约 2.6 it/s）
+
+f1 的值为 0.9441524746715508
+
+报告:
+              precision    recall  f1-score   support
+
+     finance     0.9401    0.9260    0.9330      1000
+      realty     0.9561    0.9590    0.9576      1000
+      stocks     0.9085    0.9030    0.9057      1000
+   education     0.9699    0.9660    0.9679      1000
+     science     0.9028    0.9190    0.9108      1000
+     society     0.9276    0.9480    0.9377      1000
+    politics     0.9237    0.9320    0.9278      1000
+      sports     0.9859    0.9790    0.9824      1000
+        game     0.9712    0.9440    0.9574      1000
+entertainment     0.9573    0.9650    0.9612      1000
+
+      accuracy                        0.9441     10000
+     macro avg     0.9443    0.9441    0.9442     10000
+  weighted avg     0.9443    0.9441    0.9442     10000

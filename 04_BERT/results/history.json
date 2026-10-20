@@ -1,0 +1,87 @@
+[
+  {
+    "epoch": 1,
+    "train": {
+      "loss": 0.4024562017672178,
+      "accuracy": 0.8825222222222222
+    },
+    "dev": {
+      "accuracy": 0.9308,
+      "precision_macro": 0.9314606877936479,
+      "recall_macro": 0.9308000000000002,
+      "f1_macro": 0.9310046899176563,
+      "loss": 0.24101749733947217
+    },
+    "learning_rate": 1.7777777777777777e-05,
+    "is_best": true,
+    "elapsed_seconds": 13262.421999999999
+  },
+  {
+    "epoch": 2,
+    "train": {
+      "loss": 0.193925534819408,
+      "accuracy": 0.9445888888888889
+    },
+    "dev": {
+      "accuracy": 0.9336,
+      "precision_macro": 0.9342936069331189,
+      "recall_macro": 0.9336,
+      "f1_macro": 0.9335567836662007,
+      "loss": 0.24947690286152066
+    },
+    "learning_rate": 1.3333333333333333e-05,
+    "is_best": true,
+    "elapsed_seconds": 24738.703
+  },
+  {
+    "epoch": 3,
+    "train": {
+      "loss": 0.12521672122185895,
+      "accuracy": 0.9659222222222222
+    },
+    "dev": {
+      "accuracy": 0.9379,
+      "precision_macro": 0.9380589977629498,
+      "recall_macro": 0.9379,
+      "f1_macro": 0.937837883854824,
+      "loss": 0.26197971334187314
+    },
+    "learning_rate": 8.888888888888888e-06,
+    "is_best": true,
+    "elapsed_seconds": 35611.688
+  },
+  {
+    "epoch": 4,
+    "train": {
+      "loss": 0.07583002503800866,
+      "accuracy": 0.9807166666666667
+    },
+    "dev": {
+      "accuracy": 0.9411,
+      "precision_macro": 0.94145888305536,
+      "recall_macro": 0.9410999999999999,
+      "f1_macro": 0.9411513486079738,
+      "loss": 0.31216359267114896
+    },
+    "learning_rate": 4.444444444444444e-06,
+    "is_best": true,
+    "elapsed_seconds": 54283.734000000004
+  },
+  {
+    "epoch": 5,
+    "train": {
+      "loss": 0.039170894259399375,
+      "accuracy": 0.9907666666666667
+    },
+    "dev": {
+      "accuracy": 0.941,
+      "precision_macro": 0.9411096222309127,
+      "recall_macro": 0.9410000000000001,
+      "f1_macro": 0.94097726282591,
+      "loss": 0.3637684436199488
+    },
+    "learning_rate": 0.0,
+    "is_best": false,
+    "elapsed_seconds": 66806.359
+  }
+]

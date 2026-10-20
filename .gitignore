@@ -39,7 +39,15 @@ desktop.ini
 day*/models/
 
 # ---------- 分天项目：原始/中间数据、预训练权重（42 MB + 1.24 GB） ----------
-day03_fastext/data/
-day04_BERT/data/
-day04_BERT/pretrained/
+03_fastext/data/
+04_BERT/data/
+04_BERT/pretrained/
 **/data/processed/
+
+# ---------- 分天项目（03/04/05）改名后的规则：原来的 day*/ 已匹配不到 ----------
+0*/models/
+0*/data/
+0*/pretrained/
+*.safetensors
+*.whl
+.env

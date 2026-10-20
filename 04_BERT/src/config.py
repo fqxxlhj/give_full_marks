@@ -97,7 +97,7 @@ class Config:
         self.warmup_ratio = 0.1
 
         # Early Stopping 容忍轮数
-        self.patience = 2
+        self.patience = 4
 
         # 梯度裁剪阈值
         self.max_grad_norm = 1.0

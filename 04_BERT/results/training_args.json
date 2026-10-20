@@ -1,0 +1,32 @@
+{
+  "epochs": 5,
+  "batch_size": 16,
+  "max_length": 64,
+  "learning_rate": 2e-05,
+  "patience": 2,
+  "device": "cpu",
+  "pretrained_dir": "D:\\soft\\python\\NLP\\投满分项目\\04_bert\\pretrained\\bert-base-chinese",
+  "output_dir": "D:\\soft\\python\\NLP\\投满分项目\\04_bert\\models\\best_model",
+  "max_train_samples": null,
+  "max_dev_samples": null,
+  "overwrite_output": false,
+  "seed": 42,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "max_grad_norm": 1.0,
+  "class_names": [
+    "finance",
+    "realty",
+    "stocks",
+    "education",
+    "science",
+    "society",
+    "politics",
+    "sports",
+    "game",
+    "entertainment"
+  ],
+  "train_path": "D:\\soft\\python\\NLP\\投满分项目\\04_bert\\data\\train.txt",
+  "dev_path": "D:\\soft\\python\\NLP\\投满分项目\\04_bert\\data\\dev.txt",
+  "selection_metric": "f1_macro"
+}
