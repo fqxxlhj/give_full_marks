@@ -1,0 +1,99 @@
+{
+  "model": "deepseek-flash",
+  "sample_size": 500,
+  "sample_note": "dev 随机抽样 500 条（random_state=42），非全量 10000 条",
+  "metrics": {
+    "accuracy": 0.8,
+    "precision_macro": 0.8083,
+    "recall_macro": 0.7979,
+    "f1_macro": 0.7976
+  },
+  "latency_ms": {
+    "mean": 877.1,
+    "p50": 882.1,
+    "p90": 1060.9,
+    "p95": 1155.2,
+    "p99": 1445.0,
+    "min": 420.5,
+    "max": 1823.5
+  },
+  "tokens": {
+    "prompt_total": 169490,
+    "completion_total": 14140,
+    "per_sample_avg": 367,
+    "estimated_10k": 3672600
+  },
+  "error_count": 100,
+  "top_confusions": {
+    "finance -> stocks": 17,
+    "politics -> society": 16,
+    "stocks -> finance": 15,
+    "society -> education": 5,
+    "politics -> realty": 4,
+    "science -> finance": 4,
+    "education -> politics": 3,
+    "stocks -> realty": 3
+  },
+  "per_class": {
+    "finance": {
+      "precision": 0.5636,
+      "recall": 0.62,
+      "f1": 0.5905,
+      "support": 50
+    },
+    "realty": {
+      "precision": 0.8511,
+      "recall": 0.8511,
+      "f1": 0.8511,
+      "support": 47
+    },
+    "stocks": {
+      "precision": 0.5682,
+      "recall": 0.5682,
+      "f1": 0.5682,
+      "support": 44
+    },
+    "education": {
+      "precision": 0.9091,
+      "recall": 0.8929,
+      "f1": 0.9009,
+      "support": 56
+    },
+    "science": {
+      "precision": 0.92,
+      "recall": 0.7797,
+      "f1": 0.844,
+      "support": 59
+    },
+    "society": {
+      "precision": 0.7108,
+      "recall": 0.9077,
+      "f1": 0.7973,
+      "support": 65
+    },
+    "politics": {
+      "precision": 0.8438,
+      "recall": 0.54,
+      "f1": 0.6585,
+      "support": 50
+    },
+    "sports": {
+      "precision": 0.9455,
+      "recall": 1.0,
+      "f1": 0.972,
+      "support": 52
+    },
+    "game": {
+      "precision": 0.925,
+      "recall": 0.9024,
+      "f1": 0.9136,
+      "support": 41
+    },
+    "entertainment": {
+      "precision": 0.8462,
+      "recall": 0.9167,
+      "f1": 0.88,
+      "support": 36
+    }
+  }
+}

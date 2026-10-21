@@ -1,14 +1,5 @@
 # 步骤 05-2｜API 客户端：OpenAI 兼容 + tenacity 重试 + json_object 模式
-
-import sys  # 控制台输出编码容错：Windows 的 GBK 控制台打印乱码字符会直接报错
-
-try:
-    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-except Exception:
-    pass
-
 import os
-
 from dotenv import load_dotenv  # 加载.env文件
 # 常见一些可重试的异常
 from openai import APIConnectionError, APITimeoutError, RateLimitError, InternalServerError
@@ -63,3 +54,4 @@ if __name__ == '__main__':
     ]
     resp = call_deepseek(messages)
     print(resp.choices[0].message.content)
+    print(resp)

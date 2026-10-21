@@ -1,0 +1,11 @@
+# 05_LLM · 依赖
+# 实测环境：D:\AnacondaEnvs\fasttext_env （Python 3.10.21）
+
+openai
+python-dotenv
+tenacity
+pandas
+scikit-learn
+flask
+streamlit
+requests

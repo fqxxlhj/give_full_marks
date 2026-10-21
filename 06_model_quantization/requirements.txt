@@ -1,0 +1,8 @@
+# 06_model_quantization · 依赖
+# 实测环境：D:\AnacondaEnvs\compression （Python 3.11.17 / torch 2.14.1+cpu）
+# 注意：fasttext_env、tensorflow_env 都没有 torchao，必须用 compression 环境
+
+torch
+torchao
+transformers
+scikit-learn

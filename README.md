@@ -317,7 +317,8 @@ python 07_前端页面.py
 |---|---|---|---|
 | `03_fastext/` | FastText 全链路：预处理 → 训练 → 评估 → 预测器 → Flask → Streamlit | **0.9012** / —（autotune 0.9130） | ✅ 完成 |
 | `04_BERT/` | BERT 微调：训练 → 评估 → 推理 → Flask → Streamlit（模型 390 MB） | **0.9411 / 0.9441** | ✅ 完成 |
-| `05_LLM/` | DeepSeek 零样本分类：prompt 设计 + API 客户端（还没有评测脚本） | 待测 | 🚧 客户端完成 |
+| `05_LLM/` | DeepSeek 零样本分类：prompt + 客户端 + 500 条评测 + API + 前端 | **0.8000**（500 条抽样） | ✅ 完成 |
+| `06_model_quantization/` | BERT INT8 动态量化：体积 / 精度 / 延迟三项对比 | 0.9448（INT8，与 FP32 一致） | ✅ 完成 |
 
 ---
 
@@ -347,7 +348,7 @@ python 07_前端页面.py
 
 ---
 
-## 11. 分天项目：03 FastText / 04 BERT / 05 LLM（2026-10-18 起）
+## 11. 分天项目：03 FastText / 04 BERT / 05 LLM / 06 量化（2026-10-18 起）
 
 v1.0.0 的主流程在 `src/`；之后按天推进的新工作各自独立成子项目，互不干扰，每天一份说明 + 一份 `docs/release-notes-*.md`。
 
@@ -360,13 +361,16 @@ v1.0.0 的主流程在 `src/`；之后按天推进的新工作各自独立成子
 | FastText 词级 + 固定超参 | 0.9012 | — | 100.2 MB | 十几秒 | `03_fastext` 默认 |
 | FastText autotune | 0.9130 | — | 11.65 GB | 5 分钟搜索 | 内存杀手，慎用 |
 | **BERT-base-chinese 微调** | **0.9411** | **0.9441** | 390 MB | **18.56 小时（CPU）** | `04_BERT` |
-| LLM 零样本（DeepSeek） | 待测 | — | 0 | 0 | `05_LLM` |
+| BERT INT8 量化 | 0.9411 | 0.9448 | **146 MB** | 无需重训 | `06_model_quantization` |
+| LLM 零样本（DeepSeek） | **0.8000**（500 条抽样） | — | **0** | **0** | `05_LLM` |
 
 ### 逐天结论
 
 1. **FastText 完胜 TF-IDF + 随机森林**：+17.06 个百分点，体积 1/1.7，训练快一个量级。中文短文本（新闻标题）上**词级切分（jieba）优于字符级**（0.8999 vs 0.8716）。
 2. **autotune 要谨慎**：它把 `bucket` 拉到 1000 万、`dim` 拉到 216/309，模型从几十 MB 变成 8~11.65 GB，只换来 1.3 个点。日常开发用固定超参版本；冲最高分再用它，或做 `quantize()` 压缩（体积约 1/10）。
 3. **BERT 又高了 3.99 个点（0.9411）**，代价是 CPU 上 18.56 小时 + 390 MB 模型。**test(0.9441) ≈ dev(0.9411)**，说明训练没有对着 dev 过拟合、也没有测试集泄漏。弱类始终是 `stocks` / `science`（0.9057 / 0.9108），换模型解决不了，属于标注边界问题。
+4. **零样本大模型打不过微调小模型**：DeepSeek 零样本 500 条抽样只有 **0.8000**，比 BERT 低 14 个点，还慢 20~30 倍、按 token 付费。数据充足时，"上大模型"不是最优解。错例高度集中：`finance↔stocks` 32 条、`politics→society` 16 条。
+5. **量化省空间很划算、省时间不划算**：INT8 把 390 MB 压到 **146 MB（2.67×）**、精度 0.9447→0.9448 完全不变，但 CPU 上 p50 只快 **1.13×**（746→663 ms，batch 32）。想提速得靠 GPU 或静态量化。
 
 ### 子项目文档
 
@@ -374,7 +378,8 @@ v1.0.0 的主流程在 `src/`；之后按天推进的新工作各自独立成子
 |---|---|
 | [`03_fastext/README.md`](03_fastext/README.md) | 目录结构、6 步运行顺序、四种做法实测对比、autotune 坑的完整分析、常见问题 |
 | [`04_BERT/README.md`](04_BERT/README.md) | 训练曲线、test 指标、弱类分析、推理/接口/前端用法、已知问题 |
-| [`05_LLM/README.md`](05_LLM/README.md) | 零样本分类思路、Prompt 设计（含防注入）、客户端重试与 JSON 模式、待评测 |
+| [`05_LLM/README.md`](05_LLM/README.md) | 零样本实测 0.8000、混淆分析、延迟与 token 成本、Prompt 设计（含防注入） |
+| [`06_model_quantization/README.md`](06_model_quantization/README.md) | INT8 量化原理、体积/精度/延迟实测、为什么只快 1.13× |
 
 > **入库的只有代码、文档和小体积结果 JSON**。以下都不入库（规则见 `.gitignore`）：FastText 权重（约 20 GB）、BERT 权重（390 MB）、CUDA wheel（19 MB）、原始/中间数据、`bert-base-chinese` 预训练权重（1.24 GB）、`.env`（API Key）。克隆后按各子项目 README 自行生成或配置。
 

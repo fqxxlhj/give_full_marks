@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-21",
+  "env": {
+    "python": "3.11.17",
+    "torch": "2.14.1+cpu",
+    "torchao": "0.18.0",
+    "transformers": "5.20.2"
+  },
+  "method": "torchao Int8DynamicActivationInt8WeightConfig（动态量化，只量化 Linear）",
+  "size": {
+    "fp32_mb": 390.17,
+    "int8_mb": 145.97,
+    "compression_ratio": 2.67
+  },
+  "accuracy_test_10k": {
+    "fp32": 0.9447,
+    "int8": 0.9448,
+    "delta": 0.0001,
+    "macro_f1": {
+      "fp32": 0.9448,
+      "int8": 0.9449
+    }
+  },
+  "latency_batch32_ms": {
+    "fp32": {
+      "p50": 746.6,
+      "p95": 1201.9
+    },
+    "int8": {
+      "p50": 663.4,
+      "p95": 820.0
+    },
+    "speedup_p50": 1.13,
+    "speedup_p95": 1.47
+  },
+  "benchmark_config": {
+    "batch_size": 32,
+    "max_length": 128,
+    "warmup_steps": 20,
+    "repeat_steps": 100
+  },
+  "note": "延迟是一批 32 条的耗时；06 的 max_length=128 与 04 的 64 不同，精度不可直接互比"
+}
